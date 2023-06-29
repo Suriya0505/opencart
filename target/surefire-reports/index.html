@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-opencartSuite" class="navigator-link">
-              <span class="suite-name border-failed">opencartSuite</span>
+              <span class="suite-name border-skipped">opencartSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,35 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">2 methods,  2 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-opencartSuite" class="hide-methods failed suite-opencartSuite"> (hide)</a> <!-- hide-methods failed suite-opencartSuite -->
-                      <a href="#" panel-name="suite-opencartSuite" class="show-methods failed suite-opencartSuite"> (show)</a> <!-- show-methods failed suite-opencartSuite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-opencartSuite" class="hide-methods skipped suite-opencartSuite"> (hide)</a> <!-- hide-methods skipped suite-opencartSuite -->
+                      <a href="#" panel-name="suite-opencartSuite" class="show-methods skipped suite-opencartSuite"> (show)</a> <!-- show-methods skipped suite-opencartSuite -->
                     </span>
-                    <div class="method-list-content failed suite-opencartSuite">
+                    <div class="method-list-content skipped suite-opencartSuite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-opencartSuite" title="testCases.TC_001InvalidTestHomepage" class="method navigator-link" hash-for-method="login_In_With_Valid_Email_And_Password">login_In_With_Valid_Email_And_Password</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-opencartSuite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-opencartSuite" class="hide-methods passed suite-opencartSuite"> (hide)</a> <!-- hide-methods passed suite-opencartSuite -->
-                      <a href="#" panel-name="suite-opencartSuite" class="show-methods passed suite-opencartSuite"> (show)</a> <!-- show-methods passed suite-opencartSuite -->
-                    </span>
-                    <div class="method-list-content passed suite-opencartSuite">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-opencartSuite" title="testCases.TC_001TestHomepage" class="method navigator-link" hash-for-method="login_In_With_Valid_Email_And_Password">login_In_With_Valid_Email_And_Password</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-opencartSuite -->
+                    </div> <!-- method-list-content skipped suite-opencartSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -132,9 +123,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-opencartSuite" class="panel opencartSuite">
-          <div class="suite-opencartSuite-class-failed">
+          <div class="suite-opencartSuite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">testCases.TC_001InvalidTestHomepage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -143,18 +134,33 @@
                   <a name="login_In_With_Valid_Email_And_Password">
                   </a> <!-- login_In_With_Valid_Email_And_Password -->
                   <span class="method-name">login_In_With_Valid_Email_And_Password</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at testCases.TC_001InvalidTestHomepage.login_In_With_Valid_Email_And_Password(TC_001InvalidTestHomepage.java:47)
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: MicrosoftEdge=114.0.1823.58)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [20cc1a4f0513ed004343dd1e6493373a, get {url=http://localhost/opencartsite/}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 114.0.1823.58, ms:edgeOptions: {debuggerAddress: localhost:51854}, msedge: {msedgedriverVersion: 114.0.1823.58 (913ab82f672f..., userDataDir: C:\Users\SURIYA~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51854/devtoo..., se:cdpVersion: 114.0.1823.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 20cc1a4f0513ed004343dd1e6493373a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testBase.BaseClass.setup(BaseClass.java:61)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
+... Removed 30 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-opencartSuite-class-failed -->
-          <div class="suite-opencartSuite-class-passed">
+          </div> <!-- suite-opencartSuite-class-skipped -->
+          <div class="suite-opencartSuite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">testCases.TC_001TestHomepage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -163,10 +169,30 @@
                   <a name="login_In_With_Valid_Email_And_Password">
                   </a> <!-- login_In_With_Valid_Email_And_Password -->
                   <span class="method-name">login_In_With_Valid_Email_And_Password</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: MicrosoftEdge=114.0.1823.58)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [fec65f4bedc60ffcbdebef5119c3a35f, get {url=http://localhost/opencartsite/}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 114.0.1823.58, ms:edgeOptions: {debuggerAddress: localhost:51806}, msedge: {msedgedriverVersion: 114.0.1823.58 (913ab82f672f..., userDataDir: C:\Users\SURIYA~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51806/devtoo..., se:cdpVersion: 114.0.1823.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fec65f4bedc60ffcbdebef5119c3a35f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testBase.BaseClass.setup(BaseClass.java:61)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-opencartSuite-class-passed -->
+          </div> <!-- suite-opencartSuite-class-skipped -->
         </div> <!-- panel opencartSuite -->
         <div panel-name="test-xml-opencartSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -243,17 +269,17 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'login_In_With_Valid_Email_And_Password')
-data.setCell(0, 2, 'testCases.TC_001TestHomepage')
-data.setCell(0, 3, 13794);
+data.setCell(0, 2, 'testCases.TC_001InvalidTestHomepage')
+data.setCell(0, 3, 0);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'login_In_With_Valid_Email_And_Password')
-data.setCell(1, 2, 'testCases.TC_001InvalidTestHomepage')
-data.setCell(1, 3, 12377);
+data.setCell(1, 2, 'testCases.TC_001TestHomepage')
+data.setCell(1, 3, 0);
 window.suiteTableData['opencartSuite']= { tableData: data, tableDiv: 'times-div-opencartSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-opencartSuite">
               </div> <!-- times-div-opencartSuite -->
             </div> <!-- times-div -->
@@ -281,34 +307,20 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.TC_001TestHomepage</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setup(edge)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">login_In_With_Valid_Email_And_Password</span>
-                <span class="method-start">19177 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">33015 ms</span>
-              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.TC_001InvalidTestHomepage</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setup(edge)</span>
-                <span class="method-start">33907 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">login_In_With_Valid_Email_And_Password</span>
-                <span class="method-start">44826 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">57394 ms</span>
-              </div> <!-- configuration-class after -->
+                <span class="method-name">setup(edge)</span>
+                <span class="method-start">33469 ms</span>
+              </div> <!-- configuration-class before -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

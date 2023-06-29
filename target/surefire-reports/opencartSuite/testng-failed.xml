@@ -14,6 +14,13 @@
           <include name="login_In_With_Valid_Email_And_Password"/>
         </methods>
       </class> <!-- testCases.TC_001InvalidTestHomepage -->
+      <class name="testCases.TC_001TestHomepage">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="login_In_With_Valid_Email_And_Password"/>
+        </methods>
+      </class> <!-- testCases.TC_001TestHomepage -->
     </classes>
   </test> <!-- opencartTest(failed) -->
 </suite> <!-- Failed suite [opencartSuite] -->
